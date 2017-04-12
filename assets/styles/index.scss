@@ -147,12 +147,12 @@ html {
 }
 
 /* Clear floats */
-.gamePlay, .top {
+.gameSquare, .top {
   overflow: hidden;
 }
 
 /* Applying same to the keys */
-.gamePlay span {
+.gameSquare span {
 	float: left;
 	position: relative;
 	top: 0;
@@ -178,14 +178,14 @@ html {
 }
 
 /* hover effects */
-.gamePlay span:hover {
+.gameSquare span:hover {
 	background: #9c89f6;
 	box-shadow: 0px 4px #6b54d3;
 	color: white;
 }
 
 /* Simulating "pressed" effect on active state of the keys by removing the box-shadow and moving the keys down a bit */
-.gamePlay span:active {
+.gameSquare span:active {
 	box-shadow: 0px 0px #6b54d3;
 	top: 4px;
 }
