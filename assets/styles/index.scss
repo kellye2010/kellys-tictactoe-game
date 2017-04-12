@@ -6,6 +6,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   margin: 0;
   border: 0;
   box-sizing: border-box;
+  font: bold 14px Arial, sans-serif;
 }
 
 body {
@@ -93,22 +94,34 @@ footer {
 /*Game Board*/
 
 /* Basic reset */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-
-	/* font styling */
-	font: bold 14px Arial, sans-serif;
+// * {
+// 	margin: 0;
+// 	padding: 0;
+// 	box-sizing: border-box;
+//
+// 	/* font styling */
+// 	font: bold 14px Arial, sans-serif;
+// }
+p input {
+  align-items: flex-start;
+  text-align: center;
+  cursor: default;
+  color: buttontext;
+  background-color: buttonface;
+  box-sizing: border-box;
+  padding: 2px 6px 3px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  border-image: initial;
 }
-
 /* BG gradient */
-html {
-	height: 100%;
-	background: white;
-	background: radial-gradient(circle, #fff 20%, #ccc);
-	background-size: cover;
-}
+// html {
+// 	height: 100%;
+// 	background: white;
+// 	background: radial-gradient(circle, #fff 20%, #ccc);
+// 	background-size: cover;
+// }
 
 /* Using box shadows to create 3D effects */
 #game-board {
