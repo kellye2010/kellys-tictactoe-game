@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Tic-Tac-Toe</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-      <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-      <!-- Do not add `script` tags unless you know what you are doing -->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <h1>Tic-Tac-Toe</h1>
+<head>
+  <title>Tic-Tac-Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <form id="sign-up">
-        <fieldset>
-          <legend>Sign up!</legend>
-          <input type="text" name="credentials[email]" placeholder="email">
-          <input type="password" name="credentials[password]" placeholder="password">
-          <input type="password" name="credentials[password_confirmation]" placeholder="password_confirmation">
-          <input type="submit" name="submit" value="Sign up!">
-        </fieldset>
-      </form>
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-    <h1>Sign In</h1>
-    <form id="sign-in">
-      <fieldset>
-        <legend>Sign In</legend>
-        <input type="text" name="credentials[email]" placeholder="email">
-        <input type="password" name="credentials[password]" placeholder="password">
-        <input type="submit" name="submit" value="Sign In">
-      </fieldset>
-    </form>
+<body class="container-fluid">
+  <nav>
+    <div class="small left"><p>IMAGE</p></div>
+    <div class="large left"><h1></h1></div>
+    <div class="small right"></div>
+    <div class="small right"></div>
+  </nav>
+  <h1>Tic-Tac-Toe</h1>
 
-    <h1>Change Password</h1>
-    <form id="change-password">
-      <fieldset>
-        <legend>Sign In</legend>
-        <input type="password" name="passwords[old]" placeholder="old password">
-        <input type="password" name="passwords[new]" placeholder="new password">
-        <input type="submit" name="submit" value="Change Password">
-      </fieldset>
-    </form>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <form id="sign-up">
+    <fieldset>
+      <legend>Sign up!</legend>
+      <input type="text" name="credentials[email]" placeholder="email">
+      <input type="password" name="credentials[password]" placeholder="password">
+      <input type="password" name="credentials[password_confirmation]" placeholder="password_confirmation">
+      <input type="submit" name="submit" value="Sign up!">
+    </fieldset>
+  </form>
 
-    <h1>Sign Out</h1>
-    <form id="sign-out">
-      <fieldset>
-        <legend>Sign Out</legend>
-        <input type="password" name="passwords[old]" placeholder="old password">
-        <input type="password" name="passwords[new]" placeholder="new password">
-        <input type="submit" name="submit" value="Change Password">
-      </fieldset>
-    </form>
+  <h1>Sign In</h1>
+  <form id="sign-in">
+    <fieldset>
+      <legend>Sign In</legend>
+      <input type="text" name="credentials[email]" placeholder="email">
+      <input type="password" name="credentials[password]" placeholder="password">
+      <input type="submit" name="submit" value="Sign In">
+    </fieldset>
+  </form>
 
+  <h1>Change Password</h1>
+  <form id="change-password">
+    <fieldset>
+      <legend>Sign In</legend>
+      <input type="password" name="passwords[old]" placeholder="old password">
+      <input type="password" name="passwords[new]" placeholder="new password">
+      <input type="submit" name="submit" value="Change Password">
+    </fieldset>
+  </form>
 
-    <div class="game-board">
+  <h1>Sign Out</h1>
+  <form id="sign-out">
+    <fieldset>
+      <legend>Sign Out</legend>
+      <input type="password" name="passwords[old]" placeholder="old password">
+      <input type="password" name="passwords[new]" placeholder="new password">
+      <input type="submit" name="submit" value="Change Password">
+    </fieldset>
+  </form>
+
+<!--
+  <div class="game-board">
     <div>
       <div data-id="0">0</div>
       <div data-id="1">1</div>
@@ -73,22 +80,46 @@
       <div data-id="7">7</div>
       <div data-id="8">8</div>
     </div>
+  </div> -->
+
+  <div class="wrapper" style="width:800px; margin: auto auto;">
+    <main>
+      <!--Calculator-->
+      <div id="game-board">
+        <!-- Screen and clear key -->
+        <div class="top">
+          <div class="screen">
+            <p id="messages">(Player turns and other messages)</p>
+            </div>
+        </div>
+
+        <div class="gameSquare">
+          <span data-id="0"></span>
+          <span data-id="1"></span>
+          <span data-id="2"></span>
+
+          <span data-id="3"></span>
+          <span data-id="4"></span>
+          <span data-id="5"></span>
+
+          <span data-id="6"></span>
+          <span data-id="7"></span>
+          <span data-id="8"></span>
+        </div>
+      </div>
+
+      </div>
+
+      <!--Game Boards End-->
+  </main>
+    <!--<aside>-->
+    <!--  Instructions:-->
+    <!--</aside>-->
   </div>
+  <p class="copyright"> @Kelly English-James</p>
+  <footer> </footer>
 
 
-  <div class="blended_grid">
-    <div class="pageHeader">hey now
-    </div>
-    <div class="pageLeftMenu">hey now
-    </div>
-    <div class="pageContent"> this is what
-    </div>
-    <div class="pageRightMenu">DREAMS
-    </div>
-    <div class="pageFooter">are made of
-  </div>
-  </div>
+</body>
 
-
-    </body>
 </html>
