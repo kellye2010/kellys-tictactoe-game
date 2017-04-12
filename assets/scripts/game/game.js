@@ -3,6 +3,8 @@
 // requirements
 // Everything is set to 0 at the load of app screen
 // Player X goes first, so initialize X as first player
+const player_x
+const player_o
 const turn = 'X'
 const score = {
     'X': 0,
