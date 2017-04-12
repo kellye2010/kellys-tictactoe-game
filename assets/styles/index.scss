@@ -5,57 +5,188 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   padding: 0;
   margin: 0;
   border: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: pink;
   background-attachment: fixed;
   background-size: 100% auto;
+  margin: 0;
+  padding: 0;
 }
 
-.blended_grid {
-  display: block;
-  width: 1000px;
-  overflow: auto;
-  margin: 50px auto 0;
+html {
+	height: 100%;
+	background: white;
+	background: radial-gradient(circle, #fff 20%, #ccc);
+	background-size: cover;
 }
 
-.pageHeader {
-  background-color: rgba(0, 0, 0, 0.5);
+nav {
+  margin: 0 40px 40px 40px;
+  height: 40px;
+  border-bottom: 1px solid black;
+}
+
+nav div {
+  border-right: 1px solid black;
+}
+
+.small {
+  width: 10%;
+  height: 40px;
+  background-color: rebeccapurple;
+}
+
+.left {
   float: left;
-  clear: none;
-  height: 200px;
-  width: 1000px;
 }
 
-.pageLeftMenu {
-  background-color: rgba(0, 0, 0, 0.5);
-  float: left;
-  clear: none;
-  height: 600px;
-  width: 160px;
+.right {
+  float: right;
 }
 
-.pageContent {
-  background-color: rgba(0, 0, 0, 0.5);
-  float: left;
-  clear: none;
-  height: 600px;
-  width: 680px;
+.large {
+  width: 70%;
+  height: 40px;
+  background-color: cornflowerblue;
 }
 
-.pageRightMenu {
-  background-color: rgba(0, 0, 0, 0.5);
-  float: left;
-  clear: none;
-  height: 600px;
-  width: 160px;
+h1 {
+  text-align: center;
 }
 
-.pageFooter {
-  background-color: rgba(0, 0, 0, 0.5);
+.wrapper {
+  height: 400px;
+}
+
+/*aside {*/
+/*  width: 20%;*/
+/*  margin: 0 20px 0 10px;*/
+/*  padding: 15px;*/
+/*  background-color: yellow;*/
+/*  height: 400px;*/
+/*  float: left;*/
+/*}*/
+
+main {
+  width: 75%;
   float: left;
-  clear: none;
-  height: 100px;
-  width: 1000px;
+}
+
+p.copyright {
+  clear: both;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  background-color: cornflowerblue;
+  clear: both;
+  margin-top: 10px;
+}
+
+
+/*Game Board*/
+
+/* Basic reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	/* font styling */
+	font: bold 14px Arial, sans-serif;
+}
+
+/* BG gradient */
+html {
+	height: 100%;
+	background: white;
+	background: radial-gradient(circle, #fff 20%, #ccc);
+	background-size: cover;
+}
+
+/* Using box shadows to create 3D effects */
+#game-board {
+	width: 300px;
+	height: auto;
+
+	margin: 100px auto;
+	padding: 20px 20px 9px;
+
+	background: #9dd2ea;
+	background: linear-gradient(#9dd2ea, #8bceec);
+	border-radius: 3px;
+	box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Inset shadow on the screen to create indent */
+.top .screen {
+	height: 40px;
+	width: 212px;
+
+	float: left;
+
+	padding: 0 10px;
+
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+
+	/* Typography */
+	font-size: 17px;
+	line-height: 40px;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+/* Clear floats */
+.keys, .top {
+  overflow: hidden;
+}
+
+/* Applying same to the keys */
+.keys span {
+	float: left;
+	position: relative;
+	top: 0;
+
+	width: 70px;
+	height: 70px;
+
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+
+	margin: 0 7px 11px 0;
+
+	color: #888;
+	line-height: 36px;
+	text-align: center;
+
+	/* prevent selection of text inside keys */
+	user-select: none;
+
+	/* Smoothing out hover and active states using css3 transitions */
+	transition: all 0.2s ease;
+}
+
+/* hover effects */
+.keys span:hover {
+	background: #9c89f6;
+	box-shadow: 0px 4px #6b54d3;
+	color: white;
+}
+
+/* Simulating "pressed" effect on active state of the keys by removing the box-shadow and moving the keys down a bit */
+.keys span:active {
+	box-shadow: 0px 0px #6b54d3;
+	top: 4px;
 }
