@@ -3,16 +3,16 @@
 // requirements
 // Everything is set to 0 at the load of app screen
 // Player X goes first, so initialize X as first player
-const player_x
-const player_o
-const turn = 'X'
+const player1 = 'x'
+const player2 = '0'
+const whoseTurn = player1
 const score = {
-    'X': 0,
-    'O': 0
+  'X': 0,
+  'O': 0
 }
 // need an array that holds the place of a square in the gameboard
 
-const board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+const board = []
 
 // Game winning combinations
 const winCombinations = [
@@ -27,16 +27,34 @@ const winCombinations = [
 ]
 
 // We want the board to respond each time a there is a valid click on a square by a player
-$('.gameSquare').on('click', function () {
+$('.game-board').on('click', function () {
   alert('Hello World!')
-  //Place an 'X' or 'O' value into the selected square, and disable it from being clicked again until the game has been RESET
+  // Place an 'X' or 'O' value into the selected square, and disable it from being clicked again until the game has been RESET
 })
 
-// after each move, we want the game engine to run a check on the values in the winning combinations
-//if winCombinations is met, then console.log('Player__ has won!')
+$('.game-board').find('span').click(function () {
+  $(this).text('X')
+})
+
+// const whoseTurn = player1
+
+$('.game-board').find('span').click(function () {
+  for (var i = 0; i < array.length; i++) {
+    array[i]
+    if (whoseTurn === player1) {
+      $(this).text('x')
+      whoseTurn = player2
+    } else {
+      $(this).text('o')
+      whoseTurn = player1
+    }
+  }
+})
+// After each move, we want the game engine to run a check on the values in the winning combinations
+// If winCombinations is met, then console.log('Player__ has won!')
 
 // if all 9 spaces in the array have been selected and selectedSquares is not equal
-//to winCombinations then it was a Draw
+// To winCombinations then it was a Draw
 
 const gameOver = true;
-//Then reset game without refreshing page
+// Then reset game without refreshing page
