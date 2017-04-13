@@ -33,13 +33,15 @@ const board = []
 // Game winning combinations
 const winCombinations = [
   [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+
   [0, 3, 6],
-  [0, 4, 8],
   [1, 4, 7],
   [2, 5, 8],
-  [2, 4, 6],
-  [3, 4, 5],
-  [6, 7, 8]
+
+  [0, 4, 8],
+  [2, 4, 6]
 ]
 
 // We want the board to respond each time a there is a valid click on a square by a player
@@ -71,6 +73,13 @@ $('.game-board').find('span').click(function () {
     }
   }
 })
+if (whoseTurn === player1) {
+  $(this).text('X')
+  return whoseTurn === player2
+} else if (whoseTurn !== player1) {
+  $(this).text('O')
+  return whoseTurn === player1
+}
 // After each move, we want the game engine to run a check on the values in the winning combinations
 // If winCombinations is met, then console.log('Player__ has won!')
 

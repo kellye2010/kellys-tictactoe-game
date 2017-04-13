@@ -9,16 +9,41 @@
 // $('.game-board').find('span').click(function () {
 //   $(this).text('X')
 // })
+const player1 = 'X'
+const player2 = 'O'
+let whoseTurn = player1
 
 const clickSquare = function (event) {
   event.preventDefault()
-  console.log('Hello, World!')
-  // $('.game-board').find('span').click(function () {
-  //    $('span').text('X')
-  // api.clickSquare()
-  //   .then(ui.validSquare)
-  //   .catch(ui.invalidSquare)
+  console.log($(this))
+  if (whoseTurn === player1) {
+    $(this).text('X')
+    whoseTurn = player2
+  } else {
+    $(this).text('O')
+    whoseTurn = player1
+  }
 }
+// if (whoseTurn = player1) {
+//   $(this).text('X')
+//   whoseTurn = player2
+// } else (whoseTurn = player2) {
+//   $(this).text('O')
+//   whoseTurn = player1
+// api.clickSquare()
+//   .then(ui.validSquare)
+//   .catch(ui.invalidSquare)
+
+// const playerXTurn = true
+//
+//     if (playerXTurn === true) {
+//       $(this).text('X')
+//       return playerXTurn === false
+//     } else if (playerXTurn !== true) {
+//       $(this).text('O')
+//       return playerXTurn === true
+//     }
+
 // const onSignUp = function (event) {
 //   const data = getFormFields(event.target)
 //   event.preventDefault()
@@ -64,7 +89,7 @@ const addHandlers = () => {
 }
 //
 module.exports = {
-  clickSquare,
+  // clickSquare,
   //   onSignUp,
   //   onSignIn,
   //   onChangePassword,
