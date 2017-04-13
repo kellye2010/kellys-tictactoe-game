@@ -49,14 +49,6 @@ const winCombinations = [
 
 
 
-$('.game-board').on('click', function() {
-  alert('Hello World!')
-  // Place an 'X' or 'O' value into the selected square, and disable it from being clicked again until the game has been RESET
-})
-
-$('.game-board').find('span').click(function () {
-  $(this).text('X')
-})
 // const whoseTurn = player1
 
 $('.game-board').find('span').click(function () {
@@ -73,13 +65,6 @@ $('.game-board').find('span').click(function () {
     }
   }
 })
-if (whoseTurn === player1) {
-  $(this).text('X')
-  return whoseTurn === player2
-} else if (whoseTurn !== player1) {
-  $(this).text('O')
-  return whoseTurn === player1
-}
 // After each move, we want the game engine to run a check on the values in the winning combinations
 // If winCombinations is met, then console.log('Player__ has won!')
 
