@@ -3,8 +3,8 @@
 // requirements
 // Everything is set to 0 at the load of app screen
 // Player X goes first, so initialize X as first player
-const player1 = 'x'
-const player2 = '0'
+const player1 = 'X'
+const player2 = 'O'
 const whoseTurn = player1
 const score = {
   'X': 0,
@@ -42,10 +42,10 @@ $('.game-board').find('span').click(function () {
   for (var i = 0; i < array.length; i++) {
     array[i]
     if (whoseTurn === player1) {
-      $(this).text('x')
+      $(this).text('X')
       whoseTurn = player2
     } else {
-      $(this).text('o')
+      $(this).text('O')
       whoseTurn = player1
     }
   }
@@ -56,5 +56,8 @@ $('.game-board').find('span').click(function () {
 // if all 9 spaces in the array have been selected and selectedSquares is not equal
 // To winCombinations then it was a Draw
 
-const gameOver = true;
+const gameOver = true
+// if (gameOver === true) {
+// disable further moves
+// }
 // Then reset game without refreshing page
