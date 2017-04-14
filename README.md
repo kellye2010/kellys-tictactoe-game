@@ -1,78 +1,33 @@
-A Tic-Tac-Toe game
-Requirements
+Tic-Tac-Toe
+https://kellye2010.github.io/kellys-tictactoe-game/
 
-In order to get a satisfactory score, by the time you present your project, you must:
+Tic Tac Toe game created following requirements as first project for General Assembly Boston's Web Development Immersive program. 
 
-Present working browser game, built by you, hosted on GitHub Pages.
+Basic features
 
-Practice using version control by:
+Authentication (backed by a Rails API): register, log in, change password, log out
+A clickable game board
 
-Sharing your work through a git repository hosted on Github.
-Making frequent, cohesive commits dating back to the very beginning of the project with good commit messages.
-Produce documentation in the form of a README, which must:
+Technologies used
 
-Link to your hosted game in the URL section of your Github repo.
-List technologies used.
-Document your planning and tell a story about your development process and problem-solving strategy.
-List unsolved problems which would be fixed in future iterations.
-Link to wireframes and user stories.
-Your app must:
+GA WDI Boston Browser Template
+JavaScript
+jQuery
+AJAX
 
-Be a single-page application.
+Planning
 
-Use a custom game engine written by you.
+I planned by writing out user stories/scenarios and UI wireframes. While the popular game of Tic-Tac-Toe as a game is widely understood, I looked at current Tic-Tac-Toe apps out on the web to play a few rounds. I did this to get an idea of some of the things that need to happen in the background that the average game player wouldn’t need to think about as they make their every move.
 
-Be deployed online, where the rest of the world can access it.
+Development
 
-Render a game board in the browser.
+I focused on the logic and functionality of the Tic-Tac-Game first. I started by creating the authentication, which included a sign-up, sign-in, login, logout, and change of password. Next I began creating the UI for the board itself in my index.html and .cscc files. Once the board was created, I began putting together the login, starting with users being able to click a square on the game board, and the game board would respond by displaying either an X or an O, with X being the first game token, followed by O.
 
-Switch turns between X and O (or whichever markers you select).
+Takeaways
 
-Visually display which side won if a player gets three in a row or show a draw/"cat’s game" if neither wins.
+Planning with respect to requirements will always be the most important part of any development. Taking the time and necessary steps to plan everything early will save time later.
 
-Support playing multiple games, one at a time.
+Next steps
 
-Use jQuery for DOM manipulation and event handling.
-
-Use AJAX for interacting with a provided API. Specifically, your app must:
-
-Visually display the results of retrieving game statistics, such as total games won by a user. (READ)
-Create new games on the server. (CREATE)
-Update a game by storing new moves. (UPDATE)
-Have login, logout, and change password functionality.
-
-Your app must not:
-
-Rely on refreshing the page for any functionality.
-Display non-functional buttons, nor buttons that do not successfully complete a task.
-Have any user-facing bugs.
-Be playable after finishing a game.
-Allow players to move in the same square more than once.
-Change players when an invalid move is made.
-Additionally, you should:
-
-Use semantic HTML.
-
-Practice separation of concerns by:
-
-Using the js-template to store HTML, CSS, and JavaScript in the appropriate places.
-Storing DOM manipulation code and network code in separate files.
-KISS (Keep It Stupidly Simple).
-
-DRY (Don't Repeat Yourself).
-
-Assume player X is the first player to start the game.
-
-Finally, you should not:
-
-Use alerts for anything.
-Display errors or warnings in the console.
-Display debugging messages in the console.
-
-This will be the first project completed for GA Boston's WDI Program.
-## [License](LICENSE)
-
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
-# kellys-tictactoe-game
+Complete remaining requirements for game functionality
+Tweaks to the UI
