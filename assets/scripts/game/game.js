@@ -44,6 +44,33 @@ const winCombinations = [
   [2, 4, 6]
 ]
 
+function checkForWinner() {
+  const space1 = $(".game-board .square id(0)").text();
+  const space2 = $(".game-board .square id(1)").text();
+  const space3 = $(".game-board .square id(2)").text();
+  const space4 = $(".game-board .square id(3)").text();
+  const space5 = $(".game-board .square id(4)").text();
+  const space6 = $(".game-board .square id(5)").text();
+  const space7 = $(".game-board .square id(6)").text();
+  const space8 = $(".game-board .square id(7)").text();
+  const space9 = $(".game-board .square id(8)").text();
+  // check rows
+  if      ((space0==space1) && (space1==space2)) { return space3; }
+  else if ((space3==space4) && (space4==space5)) { return space6; }
+  else if ((space6==space7) && (space7==space8)) { return space9; }
+  // check columns
+  else if ((space1==space4) && (space4==space7)) { return space7; }
+  else if ((space2==space5) && (space5==space8)) { return space8; }
+  else if ((space3==space6) && (space6==space9)) { return space9; }
+  // check diagonals
+  else if ((space1==space5) && (space5==space9)) { return space9; }
+  else if ((space3==space5) && (space5==space7)) { return space7; }
+  // no winner
+  ?
+}
+
+});
+
 // We want the board to respond each time a there is a valid click on a square by a player
 // for each .square selected on the board, we want to grab the id
 

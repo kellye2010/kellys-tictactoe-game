@@ -2,7 +2,9 @@
 
  // const config = require('../config.js')
  // const store = require('../store.js')
-
+const createNewGame
+const updateGame // after each move
+const getAllGames // users stats
 // // const signUp = (data) =>
 // // new Promise(function (resolve, reject) {
 // //   if (Math.random() > 0.5) {

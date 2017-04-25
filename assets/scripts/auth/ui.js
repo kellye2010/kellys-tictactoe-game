@@ -12,6 +12,7 @@ const signUpSuccess = (response) => {
 
 const signUpFailure = (error) => {
   console.error(error)
+  $('#messages').text('Sign up failed')
 }
 
 // const signInSuccess = (data) => {
