@@ -6,7 +6,7 @@
 #   --request PATCH \
 #   --data-urlencode ""
 
-curl --include --request PATCH http://localhost:4741/change-password/$ID \
+curl --include --request PATCH https://ga-wdi-boston.herokuapp.com/change-password/$ID \
   --header "Authorization: Token token=$TOKEN" \
   --header "Content-Type: application/json" \
   --data '{
