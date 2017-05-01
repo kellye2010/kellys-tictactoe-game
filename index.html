@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tic-Tac-Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+  <!-- <nav>
+    <div class="small left">
+      <p>IMAGE</p>
+    </div>
+    <div class="large left">
+      <h1></h1></div>
+    <div class="small right"></div>
+    <div class="small right"></div>
+  </nav> -->
+
+  <h1>Tic-Tac-Toe</h1>
+
+  <p>The object of Tic Tac Toe is to get three in a row. You play on a three by three game board. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row (horizontal,
+    verticle, or diagonal) resulting in a game win, or until all nine squares are filled.</p>
+
+
+  <form id="sign-up">
+    <fieldset>
+      <legend>Sign up!</legend>
+      <input type="text" name="credentials[email]" placeholder="email">
+      <input type="password" name="credentials[password]" placeholder="password">
+      <input type="password" name="credentials[password_confirmation]" placeholder="password_confirmation">
+      <input type="submit" name="submit" value="Sign up!">
+    </fieldset>
+  </form>
+
+  <form id="sign-in">
+    <fieldset>
+      <legend>Sign In</legend>
+      <input type="text" name="credentials[email]" placeholder="email">
+      <input type="password" name="credentials[password]" placeholder="password">
+      <input type="submit" name="submit" value="Sign In">
+    </fieldset>
+  </form>
+
+  <form id="change-password">
+    <fieldset>
+      <legend>Sign In</legend>
+      <input type="password" name="passwords[old]" placeholder="old password">
+      <input type="password" name="passwords[new]" placeholder="new password">
+      <input type="submit" name="submit" value="Change Password">
+    </fieldset>
+  </form>
+
+  <form id="sign-out">
+    <fieldset>
+      <legend>Sign Out</legend>
+      <input type="password" name="passwords[old]" placeholder="old password">
+      <input type="password" name="passwords[new]" placeholder="new password">
+      <input type="submit" name="submit" value="Change Password">
+    </fieldset>
+  </form>
+
+  <!--
+  <div class="game-board">
+    <div>
+      <div data-id="0">0</div>
+      <div data-id="1">1</div>
+      <div data-id="2">2</div>
+    </div>
+    <div>
+      <div data-id="3">3</div>
+      <div data-id="4">4</div>
+      <div data-id="5">5</div>
+    </div>
+    <div>
+      <div data-id="6">6</div>
+      <div data-id="7">7</div>
+      <div data-id="8">8</div>
+    </div>
+  </div> -->
+  <main>
+    <div class="wrapper" style="width:800px; margin: auto auto;">
+
+      <!--Game Board-->
+      <div id="game-area">
+        <!-- Screen and clear key -->
+        <div class="top">
+          <div class="screen">
+            <p id="messages">(Player turns and other messages)</p>
+          </div>
+        </div>
+
+        <div class="game-board">
+          <span class="square" id="one"></span>
+          <span class="square" id="two"></span>
+          <span class="square" id="three"></span>
+
+          <span class="square" id="four"></span>
+          <span class="square" id="five"></span>
+          <span class="square" id="six"></span>
+
+          <span class="square" id="seven"></span>
+          <span class="square" id="eight"></span>
+          <span class="square" id="nine"></span>
+        </div>
+        <p>
+          <input type="button" onclick="reset()" value="RESET">
+          <button class="create-game clearBoard customcreate" id="newgame">New Game</button>
+        </p>
+      </div>
+
+    </div>
+  </main>
+  <!--Game Board End-->
+
+
+  </table>
+  <div class="row" id='announce'> </div>
+  <div id="signinSuccessAnnounce">You successfully signed in!<br>Click New Game to start playing!</div>
+  <div id='signinFailureAnnounce'>Your signin was unsuccessful.<br>Please try again.</div>
+  <div id="pwchangeSuccessAnnounce">You successfully changed your password.</div>
+  <div id='pwchangeFailureAnnounce'>Your password change was unsuccessful.<br>Please try again.</div>
+  <div id="signupSuccessAnnounce">You successfully signed up!<br>Please sign in with your new account.</div>
+  <div id='signupFailureAnnounce'>You did not successfully sign up.<br>Please try again</div>
+  <div id='signoutSuccessAnnounce'>You have signed out.<br>Come back soon!</div>
+  <div id='signoutFailureAnnounce'>You did not successfully sign out.<br>Please try again.</div>
+
+
+  <footer>
+    <p class="copyright"> Developed By Kelly English-James @ GA Boston</p>
+  </footer>
+
+</body>
+
+</html>
