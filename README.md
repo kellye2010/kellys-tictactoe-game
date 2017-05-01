@@ -8,12 +8,24 @@ Basic features
 Authentication (backed by a Rails API): register, log in, change password, log out
 A clickable game board
 
+Wireframes & User Stories
+  Wireframe: http://imgur.com/DnqbE9M
+  User Stories:
+    1. As a USER, I want to sign up to play the game.
+    2. As a USER, I want to sign in to play the game.
+    3. As a USER, I want to change my password.
+    4. As a USER, I want to sign out
+    5. As a USER, I want to start a new game.
+    6. As a USER, I want to know when I've won
+    6. As a USER, I want to reset a finished game to play again.
+    7. As a USER, I want to keep track of how many games I've won.
+
 Technologies used
 
-GA WDI Boston Browser Template
-JavaScript
-jQuery
-AJAX
+  GA WDI Boston Browser Template
+  JavaScript
+  jQuery
+  AJAX
 
 Planning
 
