@@ -1,5 +1,10 @@
 'use strict'
 
+const getFormFields = require(`../../../lib/get-form-fields`)
+
+const api = require('./api')
+const ui = require('./ui')
+
 const events = require('./events')
 // seudocode game logic building
 // requirements
@@ -8,24 +13,49 @@ const events = require('./events')
 const gameStart = true;
 // create a function that loads the game after login
 
+// const player1 = 'X'
+// const player2 = 'O'
+// const whoseTurn = player1
+// const score = {
+//   'X': 0,
+//   'O': 0
+// }
+// $('.game-board').find('span').click(function () {
+//   $(this).text('X')
+// })
 const player1 = 'X'
 const player2 = 'O'
-const whoseTurn = player1
-const score = {
-  'X': 0,
-  'O': 0
+let whoseTurn = player1
+
+const clickSquare = function (event) {
+  event.preventDefault()
+  console.log($(this))
+  if (whoseTurn === player1) {
+    $(this).text('X')
+    whoseTurn = player2
+  } else {
+    $(this).text('O')
+    whoseTurn = player1
+  }
+}
+
+const addGameHandlers = () => {
+  $('.square').on('click', clickSquare)
+  //   $('#sign-in').on('submit', onSignIn)
+  //   $('#change-password').on('submit', onChangePassword)
+  //   $('#sign-out').on('submit', onSignOut)
 }
 
 // instead of using the above, use a player array...?
-          const players = [player1, player2]
-          if players[0] then display 'X'
-          if players[1] then display 'O'
-          use this? --> object.onclick = function(){myScript aka "if" statements and what you want to appear an dwhere on the game board};
-          //or?
-          const playerobject = {[
-              player1: 'X',
-              player2: 'O'
-          ]}
+          // const players = [player1, player2]
+          // if players[0] then display 'X'
+          // if players[1] then display 'O'
+          // use this? --> object.onclick = function(){myScript aka "if" statements and what you want to appear an dwhere on the game board};
+          // //or?
+          // const playerobject = {[
+          //     player1: 'X',
+          //     player2: 'O'
+          // ]}
 // need an array that holds the place of a square in the gameboard
 
 const board = []
@@ -44,62 +74,11 @@ const winCombinations = [
   [2, 4, 6]
 ]
 
-function checkForWinner() {
-  const space1 = $(".game-board .square id(0)").text();
-  const space2 = $(".game-board .square id(1)").text();
-  const space3 = $(".game-board .square id(2)").text();
-  const space4 = $(".game-board .square id(3)").text();
-  const space5 = $(".game-board .square id(4)").text();
-  const space6 = $(".game-board .square id(5)").text();
-  const space7 = $(".game-board .square id(6)").text();
-  const space8 = $(".game-board .square id(7)").text();
-  const space9 = $(".game-board .square id(8)").text();
-  // check rows
-  if      ((space0==space1) && (space1==space2)) { return space3; }
-  else if ((space3==space4) && (space4==space5)) { return space6; }
-  else if ((space6==space7) && (space7==space8)) { return space9; }
-  // check columns
-  else if ((space1==space4) && (space4==space7)) { return space7; }
-  else if ((space2==space5) && (space5==space8)) { return space8; }
-  else if ((space3==space6) && (space6==space9)) { return space9; }
-  // check diagonals
-  else if ((space1==space5) && (space5==space9)) { return space9; }
-  else if ((space3==space5) && (space5==space7)) { return space7; }
-  // no winner
-  ?
+
+// store.game = create.game
+module.exports = {
+  clearBoard,
+  removeXO,
+  startGame,
+  addGameHandlers
 }
-
-});
-
-// We want the board to respond each time a there is a valid click on a square by a player
-// for each .square selected on the board, we want to grab the id
-
-
-
-// const whoseTurn = player1
-
-$('.game-board').find('span').click(function () {
-  for (var i = 0; i < array.length; i++) {
-    array[i].onclick = function playerMove () {
-      document.getElementById([id]).innerHTML = "YOU CLICKED ME!"
-    }
-    if (whoseTurn === player1) {
-      $(this).text('X')
-      whoseTurn = player2
-    } else {
-      $(this).text('O')
-      whoseTurn = player1
-    }
-  }
-})
-// After each move, we want the game engine to run a check on the values in the winning combinations
-// If winCombinations is met, then console.log('Player__ has won!')
-
-// if all 9 spaces in the array have been selected and selectedSquares is not equal
-// To winCombinations then it was a Draw
-
-const gameOver = true
-// if (gameOver === true) {
-// disable further moves
-// }
-// Then reset game without refreshing page

@@ -8,7 +8,7 @@
 #
 # echo
 
-curl --include --request POST http://localhost:7165/sign-in \
+curl --include --request POST https://ga-wdi-boston.herokuapp.com/sign-in \
   --header "Content-Type: application/json" \
   --data '{
     "credentials": {

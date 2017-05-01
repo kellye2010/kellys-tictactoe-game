@@ -14,7 +14,7 @@
 </head>
 
 <body class="container-fluid">
-  <nav>
+  <!-- <nav>
     <div class="small left">
       <p>IMAGE</p>
     </div>
@@ -22,10 +22,14 @@
       <h1></h1></div>
     <div class="small right"></div>
     <div class="small right"></div>
-  </nav>
+  </nav> -->
+
   <h1>Tic-Tac-Toe</h1>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p>The object of Tic Tac Toe is to get three in a row. You play on a three by three game board. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row (horizontal,
+    verticle, or diagonal) resulting in a game win, or until all nine squares are filled.</p>
+
+
   <form id="sign-up">
     <fieldset>
       <legend>Sign up!</legend>
@@ -36,7 +40,6 @@
     </fieldset>
   </form>
 
-  <h1>Sign In</h1>
   <form id="sign-in">
     <fieldset>
       <legend>Sign In</legend>
@@ -46,7 +49,6 @@
     </fieldset>
   </form>
 
-  <h1>Change Password</h1>
   <form id="change-password">
     <fieldset>
       <legend>Sign In</legend>
@@ -56,7 +58,6 @@
     </fieldset>
   </form>
 
-  <h1>Sign Out</h1>
   <form id="sign-out">
     <fieldset>
       <legend>Sign Out</legend>
@@ -97,34 +98,44 @@
         </div>
 
         <div class="game-board">
-          <span class="square" id="0"></span>
-          <span class="square" id="1"></span>
-          <span class="square" id="2"></span>
+          <span class="square" id="one"></span>
+          <span class="square" id="two"></span>
+          <span class="square" id="three"></span>
 
-          <span class="square" id="3"></span>
-          <span class="square" id="4"></span>
-          <span class="square" id="5"></span>
+          <span class="square" id="four"></span>
+          <span class="square" id="five"></span>
+          <span class="square" id="six"></span>
 
-          <span class="square" id="6"></span>
-          <span class="square" id="7"></span>
-          <span class="square" id="8"></span>
+          <span class="square" id="seven"></span>
+          <span class="square" id="eight"></span>
+          <span class="square" id="nine"></span>
         </div>
-        <p><input type="button" onclick="reset()" value="RESET"></p>
+        <p>
+          <input type="button" onclick="reset()" value="RESET">
+          <button class="create-game clearBoard customcreate" id="newgame">New Game</button>
+        </p>
       </div>
 
     </div>
   </main>
-  <!--Game Boards End-->
+  <!--Game Board End-->
 
-  <!--<aside>-->
-  <!--  Instructions:-->
-  <!--</aside>-->
+
+  </table>
+  <div class="row" id='announce'> </div>
+  <div id="signinSuccessAnnounce">You successfully signed in!<br>Click New Game to start playing!</div>
+  <div id='signinFailureAnnounce'>Your signin was unsuccessful.<br>Please try again.</div>
+  <div id="pwchangeSuccessAnnounce">You successfully changed your password.</div>
+  <div id='pwchangeFailureAnnounce'>Your password change was unsuccessful.<br>Please try again.</div>
+  <div id="signupSuccessAnnounce">You successfully signed up!<br>Please sign in with your new account.</div>
+  <div id='signupFailureAnnounce'>You did not successfully sign up.<br>Please try again</div>
+  <div id='signoutSuccessAnnounce'>You have signed out.<br>Come back soon!</div>
+  <div id='signoutFailureAnnounce'>You did not successfully sign out.<br>Please try again.</div>
 
 
   <footer>
     <p class="copyright"> Developed By Kelly English-James @ GA Boston</p>
   </footer>
-
 
 </body>
 
